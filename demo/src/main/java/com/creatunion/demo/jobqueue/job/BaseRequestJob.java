@@ -85,6 +85,7 @@ public class BaseRequestJob<T extends BaseProtocol, R extends BaseResponseEvent>
                 mResponseEvent.setState(BaseResponseEvent.STATE_SUCCESS);
                 LoginInfo loginInfo = new LoginInfo();
                 loginInfo.setStatus("成功");
+                loginInfo.setMsg(  response.body().string());
                 mResponseEvent.setResponse(loginInfo);
                 EventBus.getDefault().post(mResponseEvent);
                 Log.d(TAG, "onResponse: ");

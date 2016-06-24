@@ -16,6 +16,6 @@ public class PostTweetJob extends BaseRequestJob<LoginRequest,LoginResultEvent> 
 
     
     public PostTweetJob(LoginRequest request) {
-        super(new Params(Priority.HIGH).requireNetwork().persist(),request);
+        super(new Params(Priority.HIGH).requireNetwork(),request);
     }
 }

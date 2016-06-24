@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.creatunion.demo.BaseApplication;
 import com.creatunion.demo.R;
@@ -38,12 +39,12 @@ public class JobQueueActivity extends AppCompatActivity {
         });
     }
 
-    @Subscribe(threadMode = ThreadMode.PostThread)
+    @Subscribe(threadMode = ThreadMode.MainThread)
     public void LoginResultEvent(LoginResultEvent event) {
         if (event.getState() == BaseResponseEvent.STATE_SUCCESS) {
-
+            Toast.makeText(JobQueueActivity.this, event.getResponse().getMsg(), Toast.LENGTH_SHORT).show();
         } else {
-
+            Toast.makeText(JobQueueActivity.this, "请求失败", Toast.LENGTH_SHORT).show();
         }
     }
 
