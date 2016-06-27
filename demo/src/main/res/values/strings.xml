@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Demo</string>
     <string name="network_error">网络连接失败!</string>
-    
+    <string name="video_player">视频播放器</string>
+
 </resources>

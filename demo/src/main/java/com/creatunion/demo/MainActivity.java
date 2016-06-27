@@ -11,7 +11,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.creatunion.demo.eventbus.EventBusActivity;
+import com.creatunion.demo.flowlayout.FlowLayoutActivity;
 import com.creatunion.demo.jobqueue.JobQueueActivity;
+import com.creatunion.demo.update.UpdateVersionActivity;
+import com.creatunion.demo.videoplayer.VideoMainActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -19,7 +23,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private SimpleAdapter simppleAdapter;
 
     private Class[] claszz = new Class[]{
-            JobQueueActivity.class
+            JobQueueActivity.class,
+            EventBusActivity.class,
+            FlowLayoutActivity.class,
+            VideoMainActivity.class,
+            UpdateVersionActivity.class
     };
 
     @Override
